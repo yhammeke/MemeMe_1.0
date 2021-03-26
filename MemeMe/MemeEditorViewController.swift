@@ -214,6 +214,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(activityViewController, animated: true, completion: nil)
     }
     
+    // MARK: Reset the app.
+    
+    @IBAction func cancelMemeCreation(_ sender: Any) {
+        
+        imagePickerView.image = nil
+        topTextField.text = "TOP"
+        bottomTextField.text = "BOTTOM"
+        self.shareButton.isEnabled = false
+    }
+    
 
 }
 
