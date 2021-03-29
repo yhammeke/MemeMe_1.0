@@ -158,8 +158,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: TextField Delegate Functions
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        //self.topTextField.text = ""
-        //textField.text = ""
         switch textField {
         case topTextField:
             topTextField.text = ""
@@ -172,7 +170,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
         if textField.text == "" {
             switch textField {
             case topTextField:
@@ -225,7 +222,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: Reset the app.
     
     @IBAction func cancelMemeCreation(_ sender: Any) {
-        
         imagePickerView.image = nil
         topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
